@@ -151,13 +151,6 @@ footer {
     }
 }
 
-/* RESPONSIVE */
-@media(max-width: 900px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
-    }
-}
 /* INVITATION SECTION */
 .invite-section {
     display: flex;
@@ -261,4 +254,82 @@ footer {
 @keyframes floatLove {
     0%,100% { transform: translateY(0); }
     50% { transform: translateY(-20px); }
+}
+
+/* RESPONSIVE STYLES */
+
+/* Stack hero vertically on smaller screens */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 5%;
+    }
+
+    .hero-left {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .hero-left h1 {
+        font-size: 36px;
+        line-height: 1.1;
+    }
+
+    .hero-left p {
+        font-size: 18px;
+        margin: 10px 0 25px;
+    }
+
+    /* Countdown: wrap to multiple rows if needed */
+    .countdown {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .countdown div {
+        flex: 1 1 45%;
+        min-width: 120px;
+        padding: 12px;
+    }
+
+    /* Make the button full width and bigger tap area */
+    .btn {
+        display: inline-block;
+        width: 100%;
+        max-width: 300px;
+        padding: 14px 0;
+        font-size: 1.2rem;
+        border-radius: 40px;
+        margin: 0 auto;
+    }
+
+    /* Responsive image */
+    .hero-right img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 15px;
+        margin-bottom: 30px;
+    }
+}
+
+/* Extra small screens (phones) */
+@media (max-width: 480px) {
+    .hero-left h1 {
+        font-size: 28px;
+    }
+
+    .hero-left p {
+        font-size: 16px;
+    }
+
+    .countdown div {
+        flex: 1 1 100%;
+        min-width: unset;
+    }
+
+    .btn {
+        max-width: 100%;
+    }
 }
